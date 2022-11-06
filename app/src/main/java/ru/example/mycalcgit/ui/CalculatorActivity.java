@@ -12,6 +12,7 @@ import java.util.Map;
 
 import ru.example.mycalcgit.R;
 import ru.example.mycalcgit.model.CalculatorImpl;
+import ru.example.mycalcgit.model.Operator;
 
 public class CalculatorActivity extends AppCompatActivity implements CalculatorView {
 
@@ -58,6 +59,34 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         findViewById(R.id.button_8).setOnClickListener(digitClickListener);
         findViewById(R.id.button_9).setOnClickListener(digitClickListener);
         findViewById(R.id.button_0).setOnClickListener(digitClickListener);
+
+        Map<Integer, Operator> operators = new HashMap<>();
+        operators.put(R.id.button_plus, Operator.ADD);
+        operators.put(R.id.button_min, Operator.SUB);
+        operators.put(R.id.button_mult, Operator.MULT);
+        operators.put(R.id.button_division, Operator.DIV);
+
+        View.OnClickListener operatorsClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onOperatorPressed(operators.get(view.getId()));
+
+            }
+        };
+
+        findViewById(R.id.button_plus).setOnClickListener(operatorsClickListener);
+        findViewById(R.id.button_min).setOnClickListener(operatorsClickListener);
+        findViewById(R.id.button_mult).setOnClickListener(operatorsClickListener);
+        findViewById(R.id.button_division).setOnClickListener(operatorsClickListener);
+
+        findViewById(R.id.button_dot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onDotPressed();
+            }
+        });
+
+
     }
 
     @Override
