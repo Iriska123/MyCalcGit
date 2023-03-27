@@ -1,127 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.CalculatorActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:background="@color/black">
+    tools:context=".ui.CalculatorActivity">
 
-    <EditText
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="150dp"
         android:id="@+id/result"
         style="@style/EditTextStyle"
         android:text="0" />
 
 
-    <GridLayout
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="4"
-        android:useDefaultMargins="true">
+       android:layout_marginTop="100dp"
+        android:orientation="vertical">
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_AC"
-            android:layout_columnSpan="2"
-            android:layout_columnWeight="2"
-            android:layout_gravity="fill_horizontal"
-            android:text="@string/key_ac"
-            style="@style/ButtonStyle3"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_percent"
-            android:layout_columnWeight="1"
-            android:text="@string/key_percent"
-            style="@style/ButtonStyle.ButtonStyle2"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_division"
-            android:text="@string/key_div"
-            style="@style/ButtonStyle.ButtonStyle2"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_7"
-            android:text="@string/key_7"
-            style="@style/ButtonStyle" />
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_8"
-            android:text="@string/key_8"
-            style="@style/ButtonStyle"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_9"
-            android:text="@string/key_9"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_mult"
-            android:text="@string/key_mult"
-            style="@style/ButtonStyle.ButtonStyle2"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_4"
-            android:text="@string/key_4"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_5"
-            android:text="@string/key_5"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_6"
-            android:text="@string/key_6"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_min"
-            android:text="@string/key_min"
-            style="@style/ButtonStyle.ButtonStyle2"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_1"
-            android:text="@string/key_1"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_2"
-            android:text="@string/key_2"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_3"
-            android:text="@string/key_3"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_plus"
-            android:text="@string/key_plus"
-            style="@style/ButtonStyle.ButtonStyle2"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_0"
-            android:layout_width="wrap_content"
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="2"
-            android:layout_columnWeight="2"
-            android:layout_gravity="fill_horizontal"
-            android:backgroundTint="@color/textViewBackGray"
-            android:text="@string/key_0"
-            android:textSize="@dimen/button_text_size" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_dot"
-            android:text="@string/key_dot"
-            style="@style/ButtonStyle" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_equal"
-            android:text="@string/key_equal"
-            style="@style/ButtonStyle.ButtonStyle2"/>
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="100dp"
+            android:columnCount="4"
+            android:useDefaultMargins="true">
 
 
-    </GridLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_AC"
+                style="@style/ButtonStyle3"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="2"
+                android:layout_gravity="fill_horizontal"
+                android:text="@string/key_ac" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_percent"
+                style="@style/ButtonStyle.ButtonStyle2"
+                android:layout_columnWeight="1"
+                android:text="@string/key_percent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_division"
+                style="@style/ButtonStyle.ButtonStyle2"
+                android:text="@string/key_div" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_7"
+                style="@style/ButtonStyle"
+                android:text="@string/key_7" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_8"
+                style="@style/ButtonStyle"
+                android:text="@string/key_8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_9"
+                style="@style/ButtonStyle"
+                android:text="@string/key_9" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_mult"
+                style="@style/ButtonStyle.ButtonStyle2"
+                android:text="@string/key_mult" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_4"
+                style="@style/ButtonStyle"
+                android:text="@string/key_4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_5"
+                style="@style/ButtonStyle"
+                android:text="@string/key_5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_6"
+                style="@style/ButtonStyle"
+                android:text="@string/key_6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_min"
+                style="@style/ButtonStyle.ButtonStyle2"
+                android:text="@string/key_min" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_1"
+                style="@style/ButtonStyle"
+                android:text="@string/key_1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_2"
+                style="@style/ButtonStyle"
+                android:text="@string/key_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_3"
+                style="@style/ButtonStyle"
+                android:text="@string/key_3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_plus"
+                style="@style/ButtonStyle.ButtonStyle2"
+                android:text="@string/key_plus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="2"
+                android:layout_gravity="fill_horizontal"
+                android:backgroundTint="@color/textViewBackGray"
+                android:text="@string/key_0"
+                android:textSize="@dimen/button_text_size" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_dot"
+                style="@style/ButtonStyle"
+                android:text="@string/key_dot" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_equal"
+                style="@style/ButtonStyle.ButtonStyle2"
+                android:text="@string/key_equal" />
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
 </LinearLayout>
 

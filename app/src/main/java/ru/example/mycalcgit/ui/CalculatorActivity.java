@@ -2,6 +2,7 @@ package ru.example.mycalcgit.ui;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -23,7 +24,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-
+        Log.d("land","onCreate");
         resultTxt = findViewById(R.id.result);
 
         presenter = new CalculatorPresenter(this, new CalculatorImpl());
